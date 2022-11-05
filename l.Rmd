@@ -1,0 +1,21 @@
+---
+title: "PennStateUndefeated2.0"
+author: "Joseph Welsh"
+date: "11/5/2022"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(readxl)
+
+colnames(GasPrice) <- c("Year", "AnnualGasPrices", "N/a", "Nothing")
+
+ggplot(GasPrice) +
+  aes(x = Year, y = AnnualGasPrices) +
+  geom_col() +
+  ggtitle('Annual Gas Prices 1980-2020') +
+  xlab('Year') +
+  ylab('Prices')
+```
+
